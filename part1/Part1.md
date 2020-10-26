@@ -39,3 +39,19 @@ View logs and verify that server has been started.
 `$ kubectl logs -f project-dep-8466769d84-p9kjk`
 
 ![screenshot](1.02/img/1.02_log_pod.png)
+
+### 1.03
+
+The manifest directory is located [here](../src/main-application/manifests).
+
+Create a new deployment by applying the manifest.
+
+`$ kubectl apply -f manifests/deployment.yaml`
+
+![screenshot](1.03/img/1.03_apply_manifest.png)
+
+View logs and verify that running successfully.
+
+`$ kubectl logs hashgenerator-dep-688c764588-2j626`
+
+![screenshot](1.03/img/1.03_log_pod.png)
