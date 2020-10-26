@@ -71,3 +71,17 @@ View logs and verify that the server is running.
 `$ kubectl logs project-dep-67f848d568-4dgkx`
 
 ![screenshot](1.04/img/1.04_log_pod.png)
+
+### 1.05
+
+Forward the server port 8080 into 8080 local port.
+
+`$ kubectl port-forward project-dep-67f848d568-qs47c 8080:8080`
+
+![screenshot](1.05/img/1.05_port_forward.png)
+
+Check if port forwarding is working.
+
+`$ curl http://localhost:8080`
+
+![screenshot](1.05/img/1.05_curl.png)
