@@ -55,3 +55,19 @@ View logs and verify that running successfully.
 `$ kubectl logs hashgenerator-dep-688c764588-2j626`
 
 ![screenshot](1.03/img/1.03_log_pod.png)
+
+### 1.04
+
+The manifest directory is located [here](../src/project/manifests).
+
+Create a new deployment by applying the manifest.
+
+`$ kubectl apply -f manifests/deployment.yaml`
+
+![screenshot](1.04/img/1.04_apply_manifest.png)
+
+View logs and verify that the server is running.
+
+`$ kubectl logs project-dep-67f848d568-4dgkx`
+
+![screenshot](1.04/img/1.04_log_pod.png)
