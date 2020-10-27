@@ -101,3 +101,27 @@ Check if we can access the server from outside.
 `$ curl http://localhost:8082`
 
 ![screenshot](1.06/img/1.06_curl.png)
+
+### 1.07
+
+The service file is located [here](../src/main-application/manifests/service.yaml).
+
+Apply the new service.
+
+`$ kubectl apply -f manifests/service.yaml`
+
+![screenshot](1.07/img/1.07_apply_service.png)
+
+The ingress file is located [here](../src/main-application/manifests/ingress.yaml).
+
+Apply the new ingress.
+
+`$ kubectl apply -f manifests/ingress.yaml`
+
+![screenshot](1.07/img/1.07_apply_ingress.png)
+
+Check if we can access the server from outside.
+
+`$ curl http://localhost:8081`
+
+![screenshot](1.07/img/1.07_curl.png)
