@@ -85,3 +85,19 @@ Check if port forwarding is working.
 `$ curl http://localhost:8080`
 
 ![screenshot](1.05/img/1.05_curl.png)
+
+### 1.06
+
+The manifest service file is located [here](../src/project/manifests/service.yaml).
+
+Apply the new manifest service.
+
+`$ kubectl apply -f manifests/service.yaml`
+
+![screenshot](1.06/img/1.06_apply_service.png)
+
+Check if we can access the server from outside.
+
+`$ curl http://localhost:8082`
+
+![screenshot](1.06/img/1.06_curl.png)
