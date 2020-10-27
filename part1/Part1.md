@@ -149,3 +149,35 @@ Check if we can access the server from outside.
 `$ curl http://localhost:8081`
 
 ![screenshot](1.08/img/1.08_curl.png)
+
+### 1.09
+
+The deployment file is located [here](../src/ping-pong-app/manifests/deployment.yaml).
+
+Create a new deployment.
+
+`$ kubectl apply -f manifests/deployment.yaml`
+
+![screenshot](1.09/img/1.09_apply_deployment.png)
+
+The service file is located [here](../src/ping-pong-app/manifests/service.yaml).
+
+Apply the new service.
+
+`$ kubectl apply -f manifests/service.yaml`
+
+![screenshot](1.09/img/1.09_apply_service.png)
+
+The ingress file is located [here](../src/ping-pong-app/manifests/ingress.yaml).
+
+Apply the new ingress.
+
+`$ kubectl apply -f manifests/ingress.yaml`
+
+![screenshot](1.09/img/1.09_apply_ingress.png)
+
+Check if server is working as expected.
+
+`$ curl http://localhost:8081/pingpong`
+
+![screenshot](1.09/img/1.09_curl.png)
