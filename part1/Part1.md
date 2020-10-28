@@ -200,7 +200,7 @@ The new persistent volume claim file is located [here](../src/main-app/manifests
 
 The new deployment file for pingpong app is located [here](../src/ping-pong-app/manifests/deployment.yaml).
 
-The new deployment file for main app is located [here](../src/main-app/manifests/deployment-persistent.yaml).
+The new deployment file for main app is located [here](../src/main-app/manifests/deployment.yaml).
 
 Apply the persistent volume manifest.
 

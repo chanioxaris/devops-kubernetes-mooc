@@ -14,7 +14,8 @@ spec:
     spec:
       volumes:
         - name: shared-mainapp
-          emptyDir: { }
+          persistentVolumeClaim:
+            claimName: mainapp-claim
       containers:
         - name: mainapp-generator
           image: chanioxaris/devops-k8s-mooc-main-app-generator
