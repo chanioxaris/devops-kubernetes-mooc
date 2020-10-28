@@ -9,4 +9,4 @@ spec:
   ports:
     - port: 2345
       protocol: TCP
-      targetPort: 8080
+      targetPort: 3000

@@ -12,6 +12,13 @@ spec:
       labels:
         app: project
     spec:
+      volumes:
+        - name: shared-project
+          persistentVolumeClaim:
+            claimName: project-claim
       containers:
         - name: project
           image: chanioxaris/devops-k8s-mooc-project
+          volumeMounts:
+            - name: shared-project
+              mountPath: /usr/src/app/files
