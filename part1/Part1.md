@@ -42,7 +42,7 @@ View logs and verify that server has been started.
 
 ### 1.03
 
-The manifest directory is located [here](../src/main-application/manifests).
+The manifest directory is located [here](../src/main-app/manifests).
 
 Create a new deployment by applying the manifest.
 
@@ -104,7 +104,7 @@ Check if we can access the server from outside.
 
 ### 1.07
 
-The service file is located [here](../src/main-application/manifests/service.yaml).
+The service file is located [here](../src/main-app/manifests/service.yaml).
 
 Apply the new service.
 
@@ -112,7 +112,7 @@ Apply the new service.
 
 ![screenshot](1.07/img/1.07_apply_service.png)
 
-The ingress file is located [here](../src/main-application/manifests/ingress.yaml).
+The ingress file is located [here](../src/main-app/manifests/ingress.yaml).
 
 Apply the new ingress.
 
@@ -184,7 +184,7 @@ Check if server is working as expected.
 
 ### 1.10
 
-The new deployment file is located [here](../src/main-application/manifests/deployment.yaml).
+The new deployment file is located [here](../src/main-app/manifests/deployment.yaml).
 
 Check if server is working as expected.
 
@@ -194,13 +194,13 @@ Check if server is working as expected.
 
 ### 1.11
 
-The new persistent volume file is located [here](../src/main-application/manifests/persistentvolume.yaml).
+The new persistent volume file is located [here](../src/main-app/manifests/persistentvolume.yaml).
 
-The new persistent volume claim file is located [here](../src/main-application/manifests/persistentvolumeclaim.yaml).
+The new persistent volume claim file is located [here](../src/main-app/manifests/persistentvolumeclaim.yaml).
 
 The new deployment file for pingpong app is located [here](../src/ping-pong-app/manifests/deployment.yaml).
 
-The new deployment file for main app is located [here](../src/main-application/manifests/deployment-persistent.yaml).
+The new deployment file for main app is located [here](../src/main-app/manifests/deployment-persistent.yaml).
 
 Apply the persistent volume manifest.
 
