@@ -191,3 +191,32 @@ Check if server is working as expected.
 `$ curl http://localhost:8081`
 
 ![screenshot](1.10/img/1.10_curl.png)
+
+### 1.11
+
+The new persistent volume file is located [here](../src/main-application/manifests/persistentvolume.yaml).
+
+The new persistent volume claim file is located [here](../src/main-application/manifests/persistentvolumeclaim.yaml).
+
+The new deployment file for pingpong app is located [here](../src/ping-pong-app/manifests/deployment.yaml).
+
+The new deployment file for main app is located [here](../src/main-application/manifests/deployment-persistent.yaml).
+
+Apply the persistent volume manifest.
+
+`$ kubectl apply -f manifests/persistentvolume.yaml`
+
+![screenshot](1.11/img/1.11_apply_persistentvolume.png)
+
+Apply the persistent volume claim manifest.
+
+`$ kubectl apply -f manifests/persistentvolumeclaim.yaml`
+
+![screenshot](1.11/img/1.11_apply_persistentvolumeclaim.png)
+
+Check if server is working as expected.
+
+`$ curl http://localhost:8081/pingpong`
+`$ curl http://localhost:8081`
+
+![screenshot](1.11/img/1.11_curl.png)

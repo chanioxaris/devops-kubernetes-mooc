@@ -1,24 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pingpong-dep
+  name: mainapp-dep
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pingpong
+      app: mainapp
   template:
     metadata:
       labels:
-        app: pingpong
+        app: mainapp
     spec:
       volumes:
         - name: shared-mainapp
           persistentVolumeClaim:
             claimName: mainapp-claim
       containers:
-        - name: pingpong
-          image: chanioxaris/devops-k8s-mooc-ping-pong-app
+        - name: mainapp-generator
+          image: chanioxaris/devops-k8s-mooc-main-app-generator
+          volumeMounts:
+            - name: shared-mainapp
+              mountPath: /usr/src/app/files
+        - name: mainapp-server
+          image: chanioxaris/devops-k8s-mooc-main-app-server
           volumeMounts:
             - name: shared-mainapp
               mountPath: /usr/src/app/files

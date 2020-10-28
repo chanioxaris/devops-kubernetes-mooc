@@ -1,14 +1,17 @@
 package main
 
 import (
-	"crypto/sha1"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
+
+	"github.com/google/uuid"
 )
 
 func main() {
+	message := uuid.New().String()
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		timestampBytes, err := ioutil.ReadFile("/usr/src/app/files/timestamp")
 		if err != nil {
@@ -16,10 +19,13 @@ func main() {
 			return
 		}
 
-		timestamp := string(timestampBytes)
-		timestampHash := string(hashBytes(timestampBytes))
+		pingPongBytes, err := ioutil.ReadFile("/usr/src/app/files/pingpong")
+		if err != nil {
+			http.Error(w, "Internal server error", http.StatusInternalServerError)
+			return
+		}
 
-		response := fmt.Sprintf("Timestamp: %s, Hash: %s", timestamp, timestampHash)
+		response := fmt.Sprintf("%s: %s\nPing / Pongs: %s", string(timestampBytes), message, string(pingPongBytes))
 
 		if _, err := w.Write([]byte(response)); err != nil {
 			http.Error(w, "Internal server error", http.StatusInternalServerError)
@@ -30,10 +36,4 @@ func main() {
 	if err := http.ListenAndServe(":3000", nil); err != nil {
 		log.Fatal(err)
 	}
-}
-
-func hashBytes(input []byte) []byte {
-	h := sha1.New()
-	h.Write(input)
-	return h.Sum(nil)
 }
