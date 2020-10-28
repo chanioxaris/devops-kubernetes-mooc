@@ -12,6 +12,17 @@ spec:
       labels:
         app: mainapp
     spec:
+      volumes:
+        - name: shared-mainapp
+          emptyDir: { }
       containers:
-        - name: mainapp
-          image: chanioxaris/devops-k8s-mooc-main-app
+        - name: mainapp-generator
+          image: chanioxaris/devops-k8s-mooc-main-app-generator
+          volumeMounts:
+            - name: shared-mainapp
+              mountPath: /usr/src/app/files
+        - name: mainapp-server
+          image: chanioxaris/devops-k8s-mooc-main-app-server
+          volumeMounts:
+            - name: shared-mainapp
+              mountPath: /usr/src/app/files

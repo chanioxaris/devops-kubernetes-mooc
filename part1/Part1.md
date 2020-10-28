@@ -181,3 +181,13 @@ Check if server is working as expected.
 `$ curl http://localhost:8081/pingpong`
 
 ![screenshot](1.09/img/1.09_curl.png)
+
+### 1.10
+
+The new deployment file is located [here](../src/main-application/manifests/deployment.yaml).
+
+Check if server is working as expected.
+
+`$ curl http://localhost:8081`
+
+![screenshot](1.10/img/1.10_curl.png)
