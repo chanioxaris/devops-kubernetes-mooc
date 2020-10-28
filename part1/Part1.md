@@ -220,3 +220,27 @@ Check if server is working as expected.
 `$ curl http://localhost:8081`
 
 ![screenshot](1.11/img/1.11_curl.png)
+
+### 1.12
+
+The new persistent volume file is located [here](../src/project/manifests/persistentvolume.yaml).
+
+The new persistent volume claim file is located [here](../src/project/manifests/persistentvolumeclaim.yaml).
+
+The new deployment file is located [here](../src/project/manifests/deployment.yaml).
+
+Apply the persistent volume manifest.
+
+`$ kubectl apply -f manifests/persistentvolume.yaml`
+
+![screenshot](1.12/img/1.12_apply_persistentvolume.png)
+
+Apply the persistent volume claim manifest.
+
+`$ kubectl apply -f manifests/persistentvolumeclaim.yaml`
+
+![screenshot](1.12/img/1.12_apply_persistentvolumeclaim.png)
+
+Check if web browser renders the image.
+
+![screenshot](1.12/img/1.12_webpage.png)
