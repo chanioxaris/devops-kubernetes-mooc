@@ -244,3 +244,9 @@ Apply the persistent volume claim manifest.
 Check if web browser renders the image.
 
 ![screenshot](1.12/img/1.12_webpage.png)
+
+### 1.13
+
+Verify that form and list of todos renders correctly
+
+![screenshot](1.13/img/1.13_webpage.png)

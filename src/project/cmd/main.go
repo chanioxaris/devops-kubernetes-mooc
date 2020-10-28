@@ -37,6 +37,21 @@ const indexPage = `
 	<h1>Hello from project server</h1>
 
 	<img src="/usr/src/app/files/image.jpg" width="500" height="500"/>
+
+	<br><br>	
+
+	<form>
+  		<input type="text" name="todo" maxlength="140"><br><br>
+  		<input type="submit" value="Send">
+	</form>
+
+	<br><br>
+
+	<h2>List of todos</h2>
+	<ul>
+	  <li>Fix todo form</li>
+	  <li>Retrieve todos list</li>
+	</ul>
 </html>
 `
 
