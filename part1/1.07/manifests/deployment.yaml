@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mainapp-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mainapp
+  template:
+    metadata:
+      labels:
+        app: mainapp
+    spec:
+      containers:
+        - name: mainapp
+          image: chanioxaris/devops-k8s-mooc-main-app
